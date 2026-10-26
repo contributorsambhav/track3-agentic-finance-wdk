@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/customeragentterminal.tsx","./src/components/header.tsx","./src/components/merchantposterminal.tsx","./src/components/networkseparationbanner.tsx","./src/components/pitchdeckdrawer.tsx","./src/services/qvacagentservice.ts","./src/services/wdkservice.ts"],"version":"6.0.3"}
