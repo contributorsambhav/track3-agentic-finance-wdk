@@ -4,17 +4,24 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --port 5176",
+    "dev": "vite --port 5173",
+    "daemon": "node server/wdkAgentDaemon.mjs",
+    "doctor": "qvac doctor",
+    "test:wdk": "node test_wdk_sign.mjs",
     "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@qvac/sdk": "^0.22.0",
+    "@tetherto/wdk": "^1.0.0-beta.22",
+    "@tetherto/wdk-wallet-evm": "^1.0.0-beta.24",
     "lucide-react": "^1.61.0",
     "qrcode.react": "^4.2.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },
   "devDependencies": {
+    "@qvac/cli": "^0.17.0",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",

@@ -31,7 +31,7 @@ export const CustomerAgentTerminal = ({
   onToggleAirGap
 }: CustomerAgentTerminalProps) => {
   const [inputText, setInputText] = useState(
-    'Lipa 15 USDt kwa Mama Mboga (0x8A49c950B2f69D69995beFF0987c9D86e4922e3F)'
+    'Lipa 15 USDt kwa Mama Mboga (0x6Fac4D18c912343BF86fa7049364Dd4E424Ab9C0)'
   );
   const [isListening, setIsListening] = useState(false);
   const [isParsing, setIsParsing] = useState(false);
@@ -45,7 +45,7 @@ export const CustomerAgentTerminal = ({
   const presets = [
     {
       label: 'MAMA MBOGA GROCERIES (15.00 USDt)',
-      text: 'Lipa 15 USDt kwa Mama Mboga (0x8A49c950B2f69D69995beFF0987c9D86e4922e3F) kwa nyanya na sukuma'
+      text: 'Lipa 15 USDt kwa Mama Mboga (0x6Fac4D18c912343BF86fa7049364Dd4E424Ab9C0) kwa nyanya na sukuma'
     },
     {
       label: 'MATATU FARE KDA 402B (2.50 USDt)',

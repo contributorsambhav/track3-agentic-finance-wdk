@@ -9,8 +9,8 @@
 ## 🖥️ Screen Setup Before You Hit "Record"
 
 1. Open your browser and create **two windows side-by-side (50% / 50% split)**:
-   * **LEFT WINDOW (Customer Side)**: Navigate to `http://localhost:5176/` and make sure **CUSTOMER AGENT** is selected in the top header.
-   * **RIGHT WINDOW (Merchant POS Side)**: Navigate to `http://localhost:5176/` and click **MERCHANT POS** in the top header.
+   * **LEFT WINDOW (Customer Side)**: Navigate to `http://localhost:5173/` and make sure **CUSTOMER AGENT** is selected in the top header.
+   * **RIGHT WINDOW (Merchant POS Side)**: Navigate to `http://localhost:5173/` and click **MERCHANT POS** in the top header.
 2. Have your Windows terminal / PowerShell open behind or minimized ready to show `ping 8.8.8.8`.
 3. Set your microphone input level and start your screen recording software (OBS, Loom, or Windows Game Bar `Win + Alt + R`).
 

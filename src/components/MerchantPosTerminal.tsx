@@ -21,14 +21,14 @@ export const MerchantPosTerminal = () => {
     {
       id: 'merchant-rec-9821',
       timestamp: new Date(Date.now() - 1800000).toISOString(),
-      sender: '0x3F2b740597d26A74dE9B3b7cAcC0e8E3F2913D1b',
-      recipient: '0x8A49c950B2f69D69995beFF0987c9D86e4922e3F',
+      sender: '0x9858EfFD232B4033E47d90003D41EC34EcaEda94',
+      recipient: '0x6Fac4D18c912343BF86fa7049364Dd4E424Ab9C0',
       recipientLabel: 'Mama Mboga Grocery Terminal (POS-NBO-012)',
       amountUsdt: 12.50,
       kesEquivalent: 1618.75,
       nonce: 42,
       status: 'signed_offline',
-      signature: '0xVERIFIED_PEARS_OFFLINE_SIG_042',
+      signature: '0xb07437cb30c0e09547722f39d1e2ec8a07af3669ebc6310a422881428090fee26f31eaf0ebc538db173d188c90d5cd0113790aec6ef44a28b06b052f2e1783541b',
       rawPayload: '',
       memo: 'Sukuma wiki + 2kg maize flour',
       airgapHash: '0x4f12...9821'
@@ -70,8 +70,8 @@ export const MerchantPosTerminal = () => {
     const doubleSpendPayload = JSON.stringify({
       domain: { name: 'KibandaPayOfflineVoucher', version: '1', chainId: 137 },
       message: {
-        sender: '0x3F2b740597d26A74dE9B3b7cAcC0e8E3F2913D1b',
-        recipient: '0x8A49c950B2f69D69995beFF0987c9D86e4922e3F',
+        sender: '0x9858EfFD232B4033E47d90003D41EC34EcaEda94',
+        recipient: '0x6Fac4D18c912343BF86fa7049364Dd4E424Ab9C0',
         recipientLabel: 'Mama Mboga Grocery Terminal',
         amountUsdt: 15.00,
         kesEquivalent: 1942.50,

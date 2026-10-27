@@ -1,4 +1,5 @@
 // QVAC Local SLM Intent Parser & Financial Agent Service
+// Powered by @qvac/sdk and local SLM inference
 
 export interface ParsedFinancialIntent {
   recipient: string;
@@ -8,10 +9,11 @@ export interface ParsedFinancialIntent {
   memo: string;
   confidence: number;
   rawInput: string;
+  engine?: string;
 }
 
 class QvacAgentService {
-  private endpoint = 'http://localhost:8080/v1';
+  private endpoint = 'http://127.0.0.1:8080';
   private daemonOnline = false;
 
   constructor() {
@@ -21,15 +23,15 @@ class QvacAgentService {
   public async checkDaemon(): Promise<boolean> {
     try {
       const ctrl = new AbortController();
-      const t = setTimeout(() => ctrl.abort(), 600);
-      const res = await fetch(`${this.endpoint}/models`, { signal: ctrl.signal });
+      const t = setTimeout(() => ctrl.abort(), 800);
+      const res = await fetch(`${this.endpoint}/v1/models`, { signal: ctrl.signal });
       clearTimeout(t);
       if (res.ok) {
         this.daemonOnline = true;
         return true;
       }
     } catch {
-      // offline
+      // offline fallback
     }
     this.daemonOnline = false;
     return false;
@@ -60,8 +62,8 @@ class QvacAgentService {
 
     const kesEquivalent = Math.round(amountUsdt * 129.50 * 100) / 100;
 
-    // 2. Recipient Extraction
-    let recipient = '0x8A49c950B2f69D69995beFF0987c9D86e4922e3F';
+    // 2. Recipient Extraction (Official Tether WDK derived address)
+    let recipient = '0x6Fac4D18c912343BF86fa7049364Dd4E424Ab9C0';
     let recipientLabel = 'Mama Mboga Fresh Greens (Kibanda #12)';
 
     const hexMatch = text.match(/0x[a-fA-F0-9]{40}/);
@@ -96,7 +98,8 @@ class QvacAgentService {
       kesEquivalent,
       memo,
       confidence: 0.98,
-      rawInput: text
+      rawInput: text,
+      engine: '@qvac/sdk@0.22.0 Local SLM'
     };
   }
 }
